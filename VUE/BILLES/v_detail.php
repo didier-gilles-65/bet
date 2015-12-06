@@ -6,10 +6,11 @@
 	<link rel="stylesheet" href="dist/css/docs.min.css"> <!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="dist/css/magnific-popup.css"> <!-- Magnific Popup core CSS file -->
 	<link rel="stylesheet" href="dist/css/validate_style.css"> <!-- Feuille de style : validation saisie formulaire -->
-	<link rel="stylesheet" href="VUE/BILLES/style.css"> <!-- Feuille de style perso -->
 	<link rel="stylesheet" href="dist/css/bootstrap-image-gallery.min.css">	
 	<link rel="stylesheet" href="dist/css/blueimp-gallery.min.css">
 	<link rel="stylesheet" type="text/css" href="dist/css/sweet-alert.css">
+	<link rel="stylesheet" href="dist/css/BreadCrumb.css" type="text/css">
+	<link rel="stylesheet" href="VUE/BILLES/style.css"> <!-- Feuille de style perso -->
 </head>
 <body>
 <?php
@@ -270,7 +271,6 @@ if (isset($_GET['err']))
 	<script src="dist/js/jquery.validate.min.js"></script>
 	<script src="dist/js/dropzone.js"></script>
 	<script src="dist/js/sweet-alert.min.js"></script>
-	<link rel="stylesheet" href="dist/css/BreadCrumb.css" type="text/css">
 	<script src="dist/js/jquery.easing.1.3.js" type="text/javascript" language="JavaScript"></script>
 	<script src="dist/js/jquery.jBreadCrumb.1.1.js" type="text/javascript" language="JavaScript"></script>
 	<script src="dist/js/billesentete-login-validate.js" type="text/javascript" language="JavaScript"></script>

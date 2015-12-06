@@ -12,6 +12,6 @@ include_once('MODELE/BILLES/get_billes.php');
 $pagecourante = 'login';
 
 //error_reporting(E_ALL);
-if (!isset($_GET['page'])) { $cible = 'index'; } else { $cible = $_GET['page']; }
+if (!isset($_GET['page'])) { $cible = '/index.php'; } else { $cible = $_GET['page']; }
 
 include_once('VUE/BILLES/v_login.php');

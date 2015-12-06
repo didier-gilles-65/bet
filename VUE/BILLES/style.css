@@ -450,7 +450,7 @@ img.img-thumbnail:hover {
 	font-weight : 400;
 	position:absolute;
 	bottom: 150px;
-	left: 40px;
+	left: 5%;
 	/*width: 100%;*/
 	padding-left:10px;
 	padding-right:10px;
@@ -463,13 +463,13 @@ img.img-thumbnail:hover {
 	font-weight : 100;
 	position:absolute;
 	bottom: 50px;
-	left: 10px;
+	left: 10%;
 	/*width: 100%;*/
 	padding-left:0px;
 	padding-right:0px;
 	color:#000000;
 	opacity: 0.9;
-	line-height: 1.1
+	line-height: 1
 }
 
 .button-title{ /* global button class */
@@ -489,11 +489,33 @@ img.img-thumbnail:hover {
     border-radius: 50px;
     -moz-border-radius:50px;
     -webkit-border-radius:50px;
-		opacity: 0.8;
-
+	opacity: 0.8;
 }
 
-/* facebook button class*/
+.button-medium{ /* medium round button class */
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 46px;
+    height: 46px;
+    box-shadow: 2px 2px 2px #000;
+    padding: 8px;
+    padding-left: 9px;
+    margin: 10px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 1em;
+    border-radius: 50px;
+    -moz-border-radius:50px;
+    -webkit-border-radius:50px;
+	opacity: 1;
+}
+
+
+/* list button class*/
 .listBtn{
     background: #FFA64C;
 }
@@ -514,7 +536,7 @@ img.img-thumbnail:hover {
 }
 
 
-/* facebook button class*/
+/* login button class*/
 .loginBtn{
     background: #FFA64C;
 }
@@ -534,7 +556,7 @@ img.img-thumbnail:hover {
 	transition: all 0.5s;
 }
 
-/* facebook button class*/
+/* blog button class*/
 .blogBtn{
     background: #FFA64C;
 }
@@ -552,4 +574,61 @@ img.img-thumbnail:hover {
 	-moz-transition: all 0.5s;
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
+}
+
+/* remove picture button class*/
+.removeBtn{
+	background: #FF0000;
+}
+
+.removeBtn:before{ /* use :before to add the relevant icons */
+    font-family: "FontAwesome";
+    content: "\f1f8"; /* add trash icon */
+}
+
+.removeBtn:hover, .removeBtn:focus, .removeBtn:active{
+    color: #FFFFFF;
+    text-decoration: none;
+    background: #FF0000;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+/* Add picture button class*/
+.addBtn{
+	background: #0000FF;
+}
+
+.addBtn:before{ /* use :before to add the relevant icons */
+    font-family: "FontAwesome";
+    content: "\f055"; /* add Plus icon */
+}
+
+.addBtn:hover, .addBtn:focus, .addBtn:active{
+    color: #FFFFFF;
+    text-decoration: none;
+    background: #0000FF;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.separation {
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #000000;
+}
+
+.drop-div { 
+    width:100%; 
+    height:40px; 
+    font-size: 20px;
+    background: #FFFFFF;
+    border-color: #FFC926; 
+    border-style: dashed; 
+	vertical-align: middle;
+    border-width:3px 3px 3px 3px;
+	opacity: 0.6;
 }

@@ -35,10 +35,10 @@ if(!isset($_SESSION['connect']) || $_SESSION['connect']!=1)
     if ($req->execute())
 	{
 		$req->closeCursor();
-		header('Location: '.$page_courante.'.php?from='.$from);
+		header('Location: '.$page_courante);
 		exit();
 	}
-	header('Location: '.$page_courante.'.php?from='.$from);
+	header('Location: '.$page_courante);
 	exit();
 	
 ?>

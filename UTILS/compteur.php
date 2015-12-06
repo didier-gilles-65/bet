@@ -15,4 +15,3 @@ if(!isset($_SESSION['compteur']))
 	fputs($compteur_f, $compte);
 	fputs($compteur_f, "\n");
 }
-?> 

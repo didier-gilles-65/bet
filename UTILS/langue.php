@@ -15,6 +15,12 @@ $langues = array('en', 'fr');
 $lang = '';
 
 /*
+ * sauver la valeur de $lang dans le cookie $_COOKIE['lang']
+ */
+if ((!isset($_GET['lang'])) || ($_COOKIE['lang'] != $lang)) {
+	setcookie('lang', $lang);
+}
+/*
  * si le paramètre "lang" est défini dans l'url et s'il existe dans la liste
  * $lang prend la valeur de $_GET['lang']
  */
@@ -30,12 +36,6 @@ else if (isset($_COOKIE['lang']) && in_array($_COOKIE['lang'], $langues)) {
 	$lang = $_COOKIE['lang'];
 }
 
-/*
- * sauver la valeur de $lang dans le cookie $_COOKIE['lang']
- */
-//if (!empty($lang)) {
-//	setcookie('lang', $lang);
-//}
 /*
  * quelque soit la langue d'affichage sélectionnée
  * inclure le fichier langue par défaut pour ne manquer

@@ -121,7 +121,7 @@ $(function(){
 				required: true,
 				maxlength: 40/*,
 				remote: {
-					url: 'verifie_login.php',
+					url: 'verifie_login.php', <DESACTIVE>
 					type: "post",
 				}*/
 			},

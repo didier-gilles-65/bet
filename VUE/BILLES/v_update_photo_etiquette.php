@@ -1,9 +1,20 @@
+<!-- SET_UPDATE_PHOTO_ETIQUETTE.PHP
+
+Mise en page pour UPDATE_PHOTO_ETIQUETTE.PHP
+
+USES : 
+
+TODO:
+- Revoir la présentation barre de titre div principal
+
+-->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 	<title><?php echo $lib_update_reference_bille_05; ?></title>
 	<?php include('MODELE/common_header_include.php'); ?>
 	<link rel="stylesheet" type="text/css" href="dist/css/sweet-alert.css">
+	<link rel="stylesheet" href="dist/css/hover.css">
 	<link rel="stylesheet" href="VUE/BILLES/style.css"> <!-- Feuille de style perso -->
 </head>
 <body>
@@ -29,57 +40,49 @@ function in_array_column($text, $column, $array)
 	<div class="container">
 	<!-- Texte haut de page -->
 		<input type="hidden" id="id_photo" name="id_photo" value="0">
-		<div class="row">
+		<div class="row h-padding-normal"></div>
+		<div class="row page-head h-padding-normal">
+			<div class="col-xs-12" align="center" style="font-size:250%"><?php if (isset($_GET['libelle'])) { echo $_GET['libelle']; } else { echo 'ERROR'; } ?></div>
+			<input type="hidden" id="bmc" name="bmc" value="<?php echo $_GET['bmc']; ?>">
+			<input type="hidden" id="input_conditionnement" name="input_conditionnement" value="">
+		</div>
+		<div class="row pagination-nav">
 			<div class="col-xs-12 col-sm-6 col-sm-offset-3">
-				<div class="panel panel-success">
-					<div class="panel-heading">
-						<h3 class="panel-title" align="center"><?php echo $lib_update_reference_bille_510; ?></h3>
-					</div>
-					<div class="panel-body">
-						<div class="col-xs-12" align="center" style="font-size:130%"><?php if (isset($_GET['libelle'])) { echo $_GET['libelle']; } else { echo 'ERROR'; } ?></div>
-						<input type="hidden" id="bmc" name="bmc" value="<?php echo $_GET['bmc']; ?>">
-						<input type="hidden" id="input_conditionnement" name="input_conditionnement" value="">
-					</div>
-					<div id="previews">
-						<div class="table table-striped" class="files" >
-							<div id="template" class="file-row" align="center" >
-    <!-- This is used as the file preview template -->
-								<div class="hidden">
-									<span class="preview"><img data-dz-thumbnail /></span>
-								</div>
-								<div class="hidden">
-									<p class="name" data-dz-name></p>
-									<strong class="error text-danger" data-dz-errormessage></strong>
-								</div>
-								<div style="width:100%;">
-									<p class="size hidden" data-dz-size></p>
-									<div class="progress progress-striped active" style="height:3px" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-										<div class="progress-bar progress-bar-success" style="height:3px; width:0%;" data-dz-uploadprogress></div>
-									</div>
-								</div>
-								<div align="center" class="hidden">
-									<button class="btn btn-primary start">
-										<i class="glyphicon glyphicon-upload"></i>
-										<span></span>
-									</button>
-									<button data-dz-remove class="btn btn-warning cancel">
-										<i class="glyphicon glyphicon-ban-circle"></i>
-										<span></span>
-									</button>
+				<div id="previews">
+					<div class="table table-striped" class="files" >
+						<div id="template" class="file-row" align="center" >
+   <!-- This is used as the file preview template -->
+							<div class="hidden">
+								<span class="preview"><img data-dz-thumbnail /></span>
+							</div>
+							<div class="hidden">
+								<p class="name" data-dz-name></p>
+								<strong class="error text-danger" data-dz-errormessage></strong>
+							</div>
+							<div style="width:100%;">
+								<p class="size hidden" data-dz-size></p>
+								<div class="progress progress-striped active" style="height:3px" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+									<div class="progress-bar progress-bar-success" style="height:3px; width:0%;" data-dz-uploadprogress></div>
 								</div>
 							</div>
-						</div>					
-					</div>
-
-					<div class="panel-body" id="MyPictureDropDiv" >
-					</div>
-
+							<div align="center" class="hidden">
+								<button class="btn btn-primary start">
+									<i class="glyphicon glyphicon-upload"></i>
+									<span></span>
+								</button>
+								<button data-dz-remove class="btn btn-warning cancel">
+									<i class="glyphicon glyphicon-ban-circle"></i>
+									<span></span>
+								</button>
+							</div>
+						</div>
+					</div>					
 				</div>
-				<div class="col-xs-12" align="center">
-					<a class="btn btn-lg btn-danger hidden" id="poubelle" href="#" rel="tooltip" data-placement="right" title="Droppez l'image ici pour la supprimer"><i class="glyphicon glyphicon-trash" id="my_i"></i></a>
-					<div class="col-xs-12" align="center" id="mymsgdrop">
-						<span style="color:'#FF0000'">Droppez l'image sur la poubelle pour la supprimer</span>
-					</div>
+
+				<div class="panel-body" id="MyPictureDropDiv" >
+				</div>
+				<div class="col-xs-12 drop-div" id="poubelle" href="#" rel="tooltip" data-placement="right" title="Droppez l'image ici pour la supprimer" align="center">
+					<span style="color:'#FF0000'"><?php echo $lib_update_photo_etiquette_10; ?></span>
 				</div>
 			</div>
 			<div class="col-xs-12 col-sm-3 hidden">
@@ -166,14 +169,66 @@ $(function(){
 		}
 		
 		function set_img(cellule, s_indice, myURL, file, idphoto) {
-			var img = document.createElement("img");
-			img.style.width="100px";
-			img.src = file+"?id="+idphoto+"&dummy="+Math.floor((Math.random() * 1000000) + 1);
-			img.id="thumb"+s_indice;
-			img.setAttribute( "rel","tooltip" );
-			img.setAttribute( "data-placement","right" );
-			img.setAttribute( "title","Drop or click to update image" );
-			cellule.appendChild(img);
+
+			if ( idphoto != 0 ) {
+				var img = document.createElement("img");
+				img.style.width="100px";
+				img.src = file+"?id="+idphoto+"&dummy="+Math.floor((Math.random() * 1000000) + 1);
+				img.id="thumb"+s_indice;
+				img.setAttribute( "rel","tooltip" );
+				img.setAttribute( "data-placement","right" );
+				img.setAttribute( "title","Drop or click to update image" );
+				cellule.appendChild(img);
+				var hidden_mbc = document.createElement("input");
+				hidden_mbc.setAttribute( "class","hidden" );
+				hidden_mbc.setAttribute( "value", idphoto );
+				var rmv_btn = document.createElement("div");
+				rmv_btn.setAttribute( "class","button-medium removeBtn hvr-pulse-grow" );
+				rmv_btn.onclick = function (event) { 
+					swal({
+						title: "CONFIRMATION",
+						text: "Confirmer Suppression ?",
+						showCancelButton: true,
+						imageUrl: encodeURI(file),
+						confirmButtonColor: "#DD6B55",
+						closeOnCancel: false,							
+						cancelButtonText: "Annuler",
+						closeOnConfirm: false,
+						confirmButtonText: "Continuer"
+						},
+						function(isConfirm){   
+							if (isConfirm) {
+								var jqxhr = $.getJSON("/delete_json_etiquette.php",{id: idphoto}, function(json){
+								})
+								.done(function( json ) {
+									console.log( "delete_json_etiquette.php" );
+									$("#input_conditionnement").change();
+								})
+								.fail(function( jqxhr, textStatus, error ) {
+									var err = textStatus + ", " + error;
+									swal({ title: "Erreur lors de la suppression de l'image", text: err, imageUrl: encodeURI(file) });
+								})
+								swal("Supprimé", "L'image a été supprimée", "success");   
+							} 
+							else {
+								swal("Annulé", "L'image est conservée", "error");   
+							}
+						}
+					);				
+				};
+				cellule.appendChild(hidden_mbc);
+				cellule.appendChild(rmv_btn);
+			}
+			else
+			{
+				var add_btn = document.createElement("div");
+				add_btn.setAttribute( "class","button-medium addBtn hvr-pulse-grow" );
+				add_btn.id="thumb"+s_indice;
+				add_btn.setAttribute( "rel","tooltip" );
+				add_btn.setAttribute( "data-placement","right" );
+				add_btn.setAttribute( "title","Drop or click to update image" );
+				cellule.appendChild(add_btn);
+			}
 			$("#thumb"+s_indice).tooltip();
 			$("#thumb"+s_indice).dropzone({
 				url: myURL, // Affecte l'URL spécifique à chaque image
@@ -217,11 +272,8 @@ $(function(){
 		}
 		
 		var jqxhr = $.getJSON("/get_json_photos.php",{ upload_id_bmc: $("#input_conditionnement").val() }, function(json){
-//			console.log( "success" );
 		})
-		
 		.done(function( json ) {
-//			console.log( json );
 			var divphoto = document.getElementById("MyPictureDropDiv");
 			var id_mbc = $("#input_conditionnement").val();
 			nettoie(divphoto);
@@ -241,8 +293,8 @@ $(function(){
 			my_colonne.innerHTML += "DOS";
 			i=0;
 			while (i<json.length+1 ) {
+				my_ligne = my_table.insertRow(-1);
 				if ( i >= json.length ) {
-					my_ligne = my_table.insertRow(-1);
 					my_colonne = my_ligne.insertCell(0);
 					my_colonne.innerHTML = 'Ajouter';
 					my_colonne = my_ligne.insertCell(1);
@@ -252,7 +304,6 @@ $(function(){
 					i++;
 					continue;
 				}
-				my_ligne = my_table.insertRow(-1);
 				my_colonne = my_ligne.insertCell(0);
 				my_colonne.innerHTML = json[i][4];
 				if ( json[i][2] == 'FACE' ) {
@@ -303,7 +354,7 @@ $(function (){
             e.preventDefault();
         },
         drop: function(e) {
-			console.log( 'drop : $("#mymsgdrop").addClass("hidden");' );
+			console.log( 'drop : '+data );
             var data = e.dataTransfer.getData('text');
 			var debut = data.indexOf('id=',0)+3;
 			var fin = data.indexOf('&',debut);
@@ -316,7 +367,7 @@ $(function (){
 			})
 			.fail(function( jqxhr, textStatus, error ) {
 				var err = textStatus + ", " + error;
-				swal({ title: "Erreur lors de la suppression de l'image", text: err, imageUrl: "IMAGES/MAIN/LODEF/14.jpg" });
+				swal({ title: "Erreur lors de la suppression de l'image", text: err, imageUrl: encodeURI(data) });
 			})
             e.preventDefault();
         }

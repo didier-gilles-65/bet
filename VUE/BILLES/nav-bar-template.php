@@ -59,8 +59,8 @@
 				<li class="dropdown">
 					<a href="#" id="menulangage" role="button" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-flag"></i> <?php echo $lib_nav_150;?> <b class="caret"></b></a>
 					<ul class="dropdown-menu" role="menu" aria-labelledby="menulangage">
-						<li><a tabindex="-1" rel="tooltip" data-placement="right" title="<?php echo $lib_nav_160;?>" href="set_langue.php?lang=fr&page=<?php echo $_SERVER['REQUEST_URI'];?>"><img src="IMAGES/france.png" height=23px/> <?php echo $lib_nav_170;?></a></li>
-						<li><a tabindex="-1" rel="tooltip" data-placement="right" title="<?php echo $lib_nav_180;?>" href="set_langue.php?lang=en&page=<?php echo $_SERVER['REQUEST_URI'];?>"><img src="IMAGES/United Kingdom(Great Britain).png" height=23px/> <?php echo $lib_nav_190;?></a></li>
+						<li><a tabindex="-1" rel="tooltip" data-placement="right" title="<?php echo $lib_nav_160;?>" href="<?php echo $_SERVER['REQUEST_URI']; if (strstr($_SERVER['REQUEST_URI'], '?')) echo '&lang=fr'; else echo '?lang=fr';?>"><img src="IMAGES/france.png" height=23px/> <?php echo $lib_nav_170;?></a></li>
+						<li><a tabindex="-1" rel="tooltip" data-placement="right" title="<?php echo $lib_nav_180;?>" href="<?php echo $_SERVER['REQUEST_URI']; if (strstr($_SERVER['REQUEST_URI'], '?')) echo '&lang=en'; else echo '?lang=en';?>"><img src="IMAGES/United Kingdom(Great Britain).png" height=23px/> <?php echo $lib_nav_190;?></a></li>
 					</ul>
 				</li>
 <!-- UTILISATEUR -->

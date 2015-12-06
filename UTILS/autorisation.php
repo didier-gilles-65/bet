@@ -12,7 +12,7 @@ $login = $_POST['connect_login'];
 $mdp = $_POST['connect_password'] ;
 if(isset($_POST['login_persistent']) && (($_POST['login_persistent'])== 'true')) { $persistent_flag = 1; } else { $persistent_flag = 0; }
 
-if (isset($_GET['page'])) { $cible = $_GET['page']; } else { $cible = 'index'; }
+if (isset($_GET['page'])) { $cible = $_GET['page']; } else { $cible = '/index.php'; }
 
 $query = "SELECT * FROM comptes where LOGIN = '$login'";
 $req = $bdd->prepare($query);
