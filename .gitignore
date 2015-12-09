@@ -1,2 +1,4 @@
-#ignore le répertoire des images
+﻿#ignore le répertoire des images
 IMAGES/
+*.log
+compteur.txt

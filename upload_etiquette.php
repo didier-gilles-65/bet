@@ -1,3 +1,12 @@
+<!-- UPLOAD_ETIQUETTE.PHP
+
+script PHP pour uploader une image d'etiquette.
+
+USES : 
+
+TODO:
+
+-->
 <?php
 error_reporting(E_ALL);
 include_once('UTILS/log.php');
