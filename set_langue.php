@@ -1,3 +1,12 @@
+<!-- SET_LANGUE.PHP
+
+Script PHP permettant de changer la langue d'affichage en remplaçant le cookie lang en fonction de ce qui est passé en requestParam
+
+USES : 
+
+TODO:
+
+-->
 <?php
 session_start();
 include_once('UTILS/log.php');

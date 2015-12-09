@@ -599,6 +599,8 @@ $lib_liste_sachets_20 = 'CODE BARRE';
 $lib_liste_sachets_30 = 'COMMENTAIRE CONDITIONNEMENT';
 $lib_liste_sachets_40 = 'Retour';
 
+$lib_update_photo_etiquette_10 = 'Droppez l\'image ici pour la supprimer';
+
 
 // ORDRES SQL
 

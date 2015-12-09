@@ -1,3 +1,12 @@
+<!-- SET_CONTACT.PHP
+
+Script PHP permettant d'uploader un fichier et en même temps d'envoyer un email avec le contenu passé en post
+
+USES : SET_CONTACT_UTIL.PHP
+
+TODO: Modifier le fonctionnement pour permettre de transmettre le fichier comme une PJ du mail : hint : http://jv-web.blogspot.fr/2013/08/tuto-php-mail-piece-jointe.html
+
+-->
 <?php
 session_start();
 include_once('MODELE/BILLES/set_contact_util.php');

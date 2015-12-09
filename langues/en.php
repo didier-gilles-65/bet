@@ -598,6 +598,8 @@ $lib_liste_sachets_20 = 'BAR CODE';
 $lib_liste_sachets_30 = 'PACKAGING COMMENT';
 $lib_liste_sachets_40 = 'Back';
 
+$lib_update_photo_etiquette_10 = 'Drop picture here to remove it';
+
 
 // ORDRES SQL
 
