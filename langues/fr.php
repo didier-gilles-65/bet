@@ -26,6 +26,9 @@ $crumb_blog = 'Blog';
 $crumb_post = 'Nouveau message';
 $crumb_editpost = 'Modifier message';
 
+$lib_notif = array('message_envoye' => 'Votre message a été envoyé',
+					'erreur' => 'Notification inconnue');
+
 $lib_div_1000 = 'Noms des billes...';
 $lib_div_1010 = 'Ajouter';
 $lib_div_1020 = 'Conditionnements';

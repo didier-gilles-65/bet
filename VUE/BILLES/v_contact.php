@@ -59,10 +59,9 @@
 						<div class="control-group" align="center">
 							<div style="position:relative;">
 								<input type="hidden" name="MAX_FILE_SIZE" value="9000000" />
-								<a class='btn btn-primary' href='javascript:;'><?php echo $lib_contact_151; ?>
-									<input type="file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="nomfichier" size="40"  onchange='$("#upload-file-info").html($(this).val());'>
-								</a>
-								&nbsp;
+								<div class='btn btn-primary' style="position: relative; overflow: hidden; margin: 10px;" ><span><?php echo $lib_contact_151; ?></span>
+									<input type="file" style='position: absolute; top: 0; right: 0; margin: 0; padding: 0; font-size: 20px; cursor: pointer; opacity: 0; filter: alpha(opacity=0);' name="nomfichier" size="40" onchange='$("#upload-file-info").html($(this).val());'>
+								</div>
 								<span class='label label-info' id="upload-file-info"></span>
 							</div>
 						</div>

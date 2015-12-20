@@ -41,6 +41,21 @@ if (isset($_GET['err']))
 <?php
 }
 ?>
+<?php	
+if (isset($_GET['notif']))
+{
+?>
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="alert alert-info alert-dismissable">
+					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+					<strong>Notif : </strong><?php if (isset($lib_notif[$_GET['notif']])) echo $lib_notif[$_GET['notif']]; else echo $lib_notif["erreur"]; ?>
+				</div>
+			</div>
+		</div>
+<?php
+}
+?>
 		<header >
 			<div class="container hidden-print" style="background-color:transparent; width:100%; padding-top:40px; padding-bottom:40px; background-size: 2000px" >
 				<div class="col-xs-4 col-md-2 center" style="padding:10px">
