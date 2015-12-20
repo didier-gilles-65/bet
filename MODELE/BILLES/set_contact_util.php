@@ -31,11 +31,7 @@ $sujet = $theme.' - from : '.$email;
 
 //=====Création du header de l'e-mail
 $header= 'From: "Site Billes En Tête" <'.$email_site.'>'.PHP_EOL;
-$header.= 'To: "Site Billes En Tête" <'.$email_site.'>'.PHP_EOL;
-$header.= 'Reply-to: "Site Billes En Tête" <'.$email_site.'>'.PHP_EOL;
 $header.= 'Delivered-to: "Site Billes En Tête" <'.$email_site.'>'.PHP_EOL;
-$header.= 'Cc: "Site Billes En Tête" <'.$email_site.'>'.PHP_EOL;
-$header.= 'X-Priority: 1 '.PHP_EOL;
 $header.= 'MIME-Version: 1.0'.PHP_EOL;
 $header.= 'Content-Type: multipart/mixed;'.PHP_EOL.' boundary="'.$boundary.'"'.PHP_EOL;
 //==========
