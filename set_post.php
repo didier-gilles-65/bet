@@ -1,4 +1,5 @@
-<!-- SET_POST.PHP
+<?php
+/* SET_POST.PHP
 
 Script PHP permettant de mettre à jour un POST ou d'en créer un nouveau.
 
@@ -6,8 +7,7 @@ USES :
 
 TODO:
 
--->
-<?php
+*/
 session_start();
 error_reporting(E_ALL);
 include_once('UTILS/log.php');

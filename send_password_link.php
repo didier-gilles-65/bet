@@ -1,4 +1,15 @@
 <?php
+/* SEND_PASSWORD_LINK.PHP
+
+Script PHP permettant d'envoyer un mail avec un lien sur la page de modification de mot de passe.
+
+Les critères sont passés en POST
+
+USES : 
+
+TODO:
+
+*/
 session_start();
 include_once('UTILS/log.php');
 include_once('UTILS/gestion_erreur.php');

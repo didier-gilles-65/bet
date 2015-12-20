@@ -1,4 +1,5 @@
-<!-- UNSIGN.PHP
+<?php
+/* UNSIGN.PHP
 
 script PHP permettant la déconnexion de l'utilisateur par suppression des infos de connexion en session, et par reset des cookies de session.
 
@@ -6,8 +7,7 @@ USES :
 
 TODO:
 
--->
-<?php
+*/
 session_start();
 include_once('UTILS/log.php');
 include_once('UTILS/gestion_erreur.php');

@@ -1,4 +1,5 @@
-<!-- SET_UPDATE_BILLE.PHP
+<?php
+/* SET_UPDATE_BILLE.PHP
 
 script PHP de mise à jour des données de référence d'un type de billes.
 
@@ -6,8 +7,7 @@ USES :
 
 TODO:
 
--->
-<?php
+*/
 error_reporting(E_ALL);
 include_once('UTILS/log.php');
 include_once('UTILS/gestion_erreur.php');

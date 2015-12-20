@@ -1,4 +1,5 @@
-<!-- UPDATE_BILLE.PHP
+<?php
+/* UPDATE_BILLE.PHP
 
 Page HTML permettant de mettre à jour les sachets ou conditionnement possédés par l'utilisateur logué pour un type de bille donné.
 
@@ -11,8 +12,7 @@ USES : C_UPDATE_BILLE.PHP, V_UPDATE_BILLE.PHP
 
 TODO:
 
--->
-<?php
+*/
 session_start();
 include_once('UTILS/log.php');
 include_once('UTILS/gestion_erreur.php');

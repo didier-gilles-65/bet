@@ -1,4 +1,5 @@
-<!-- UPDATE_SAC.PHP
+<?php
+/* UPDATE_SAC.PHP
 
 Page HTML permettant d'associer des photos à un sachet répertorié.
 
@@ -11,8 +12,7 @@ USES : C_UPDATE_SAC.PHP, V_UPDATE_SAC.PHP
 TODO:
 - rafraichissement dynamique après traitement du drop
 
--->
-<?php
+*/
 session_start();
 include_once('UTILS/log.php');
 include_once('UTILS/gestion_erreur.php');

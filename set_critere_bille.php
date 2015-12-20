@@ -1,4 +1,5 @@
-<!-- SET_CRITERE_BILLE.PHP
+<?php
+/* SET_CRITERE_BILLE.PHP
 
 Script PHP permettant de mettre à jour un mot les critères de recherche pour établir la liste des billes affichées dans la page liste, et browsée depuis l'écran detail.
 
@@ -8,8 +9,7 @@ USES :
 
 TODO:
 
--->
-<?php
+*/
 session_start();
 error_reporting(E_ALL);
 include_once('UTILS/log.php');

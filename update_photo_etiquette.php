@@ -1,4 +1,5 @@
-<!-- UPDATE_PHOTO_ETIQUETTE.PHP
+<?php
+/* UPDATE_PHOTO_ETIQUETTE.PHP
 
 Page HTML permettant de mettre à jour les photos pour un conditionnement de type de billes.
 
@@ -10,8 +11,7 @@ USES : C_UPDATE_PHOTO_ETIQUETTE.PHP, V_UPDATE_PHOTO_ETIQUETTE.PHP
 
 TODO:
 
--->
-<?php
+*/
 session_start();
 include_once('UTILS/log.php');
 include_once('UTILS/gestion_erreur.php');

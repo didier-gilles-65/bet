@@ -1,17 +1,27 @@
 <?php
-session_start();
-error_reporting(E_ALL);
-include_once('UTILS/log.php');
-include_once('UTILS/gestion_erreur.php');
-include_once('MODELE/get_connexion.php');
-include_once('UTILS/security.php'); // utils for permanent login checking
-if(!isset($_SESSION['connect']) || $_SESSION['connect']!=1) check_permanent_login();
+/* SET_COMPTE.PHP
 
-//ecrireLog('APP','INFO','fichier:set_compte.php|ligne: 6| info: DEBUT DE FICHIER');
-    function createSalt() {
-    $text = md5(uniqid(rand(), true));
+Script PHP permettant de créer un compte sur le site bille-en-tete.
+
+Les critères sont passés en POST
+
+USES : 
+
+TODO:
+
+*/
+function createSalt() {
+	$text = md5(uniqid(rand(), true));
     return substr($text, 0, 3);
-    }
+}
+	session_start();
+	error_reporting(E_ALL);
+	include_once('UTILS/log.php');
+	include_once('UTILS/gestion_erreur.php');
+	include_once('MODELE/get_connexion.php');
+	include_once('UTILS/security.php'); // utils for permanent login checking
+	if(!isset($_SESSION['connect']) || $_SESSION['connect']!=1) check_permanent_login();
+
 
     //Données passées en POST
     $login = $_POST['register_login'];
@@ -21,11 +31,9 @@ if(!isset($_SESSION['connect']) || $_SESSION['connect']!=1) check_permanent_logi
     $nom = $_POST['register_nom'];
     $prenom = $_POST['register_prenom'];
 	if(isset($_POST['register_gravatar']) && (($_POST['register_gravatar'])== 'true')) { $gravatar = 1; } else { $gravatar = 0; }
-
      
-    //VERIFICATION DES DONNEES (A ENLEVER QUAND LE CONTROLE A LA SAISIE EST IMPLEMENTE
-	 if($password1 != $password2) {
- 	ecrireLog('APP','WARNING','Difference entre mots de passe saisis: '.$password1.'|'.$password2);
+    //VERIFICATION DES DONNEES (A ENLEVER QUAND LE CONTROLE A LA SAISIE EST IMPLEMENTE)
+	if($password1 != $password2) {
 		header('Location: register.php?err=true');
 		exit();
 	}

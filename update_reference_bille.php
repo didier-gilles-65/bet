@@ -1,4 +1,5 @@
-<!-- UPDATE_REFERENCE_BILLE.PHP
+<?php
+/* UPDATE_REFERENCE_BILLE.PHP
 
 Page HTML permettant de mettre à jour les données générique de référence d'une bille.
 
@@ -14,8 +15,8 @@ USES : C_UPDATE_REFERENCE_BILLE.PHP, V_UPDATE_REFERENCE_BILLE.PHP, SET_UPDATE_RE
 
 TODO:
 
--->
-<?php
+*/
+
 session_start();
 include_once('UTILS/log.php');
 include_once('UTILS/gestion_erreur.php');

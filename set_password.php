@@ -1,4 +1,5 @@
-<!-- SET_POST.PHP
+<?php
+/* SET_POST.PHP
 
 Script PHP permettant de mettre à jour un mot de passe
 
@@ -6,8 +7,7 @@ USES :
 
 TODO:
 
--->
-<?php
+*/
 error_reporting(E_ALL);
 include_once('UTILS/log.php');
 include_once('UTILS/gestion_erreur.php');
