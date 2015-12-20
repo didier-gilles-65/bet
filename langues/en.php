@@ -26,6 +26,9 @@ $crumb_blog = 'Blog';
 $crumb_post = 'New post';
 $crumb_editpost = 'Edit message';
 
+$lib_notif = array('message_envoye' => 'Message has been sent...',
+					'erreur' => 'Unknown notification');
+
 $lib_div_1000 = 'Marbles names...';
 $lib_div_1010 = 'Add';
 $lib_div_1020 = 'Packaging';
@@ -597,6 +600,8 @@ $lib_liste_sachets_10 = 'NUMBER';
 $lib_liste_sachets_20 = 'BAR CODE';
 $lib_liste_sachets_30 = 'PACKAGING COMMENT';
 $lib_liste_sachets_40 = 'Back';
+
+$lib_update_photo_etiquette_10 = 'Drop picture here to remove it';
 
 
 // ORDRES SQL

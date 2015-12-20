@@ -1,3 +1,12 @@
+<!-- UPLOAD.PHP
+
+script PHP pour uploader une image de description de type de bille et inscription dans la table autres_photos.
+
+USES : 
+
+TODO:
+
+-->
 <?php
 error_reporting(E_ALL);
 include_once('UTILS/log.php');

@@ -6,7 +6,8 @@ USES :
 
 TODO:
 
---><?php
+-->
+<?php
 error_reporting(E_ALL);
 include_once('UTILS/log.php');
 include_once('UTILS/gestion_erreur.php');
