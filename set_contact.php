@@ -40,7 +40,6 @@ if ( !isset($contact_email) OR !isset($contact_theme) OR !isset($contact_message
 	header('Location: index.php?err=6010');
 	exit();
 }	
-print_r($_FILES['nomfichier']);
 if ($_FILES['nomfichier']['error'] == 4)
 {
 	$no_fichier = true;
