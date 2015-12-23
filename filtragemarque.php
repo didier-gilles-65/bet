@@ -3,6 +3,7 @@ session_start();
 error_reporting(E_ALL);
 include_once('UTILS/log.php');
 include_once('UTILS/gestion_erreur.php');
+include_once('MODELE/get_connexion.php');
 // primitive langue
 include_once('UTILS/langue.php');
 include_once('UTILS/log.php');
