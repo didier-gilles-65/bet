@@ -22,7 +22,7 @@
     include('VUE/BILLES/modal-apropos.php');
   //  include('VUE/BILLES/nav-bar-template.php');
 ?>
-	<div id="container-title" style="width:80%"><span id="titre" class="index-title" style="opacity:0">NOTHING</span></div>
+	<div id="container-title" style="width:80%"><a href='#' id="tag-titre" class="index-title hvr-buzz" style="opacity:0">NOTHING</a></div>
 	<div id="container-body" style="width:80%"><span id="index-body" class="index-body" style="opacity:0">NOTHING</span></div>
 	<main id="content" role="main">
 <?php	
@@ -120,6 +120,7 @@ if (isset($_GET['notif']))
 					.done(function( json ) {
 						var my_div_from = $(".index-title:first");
 						var my_body_div_from = $(".index-body:first");
+						var my_tag_titre = $("#tag-titre");
 						var bille_name = json[0]["NOM"];
 						var bille_desc = json[0]["DESCRIPTION"];
 						my_body_div_from.animate( { opacity: 0 }, 1000 );
@@ -142,7 +143,13 @@ if (isset($_GET['notif']))
 									my_div_from[0].innerHTML = bille_name;
 									my_body_div_from[0].style.color = title_color;
 									my_body_div_from[0].innerHTML = bille_desc;
-									$("#container-title").textfill({ maxFontPixels: 120, widthOnly: true, innerTag:'.index-title'});
+									$("#container-title").textfill({ 
+										maxFontPixels: 120,
+										widthOnly: true,
+										innerTag:'a',
+										debug:true
+									});
+									my_div_from[0].href = 'detail.php?id='+id_bille;
 									my_div_from.animate({opacity: 0.9}, 1000);
 									my_body_div_from.animate({opacity: 0.9}, 1000);
 									})
