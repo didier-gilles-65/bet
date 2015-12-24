@@ -458,6 +458,15 @@ img.img-thumbnail:hover {
 	opacity: 0.8;
 	line-height: 1.1
 }
+.index-title:hover, .index-title:focus, .index-title:active{
+    color: #FFFFFF;
+    text-decoration: none;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
 .index-body {
 	/*font-size:800%;*/
 	font-weight : 100;
