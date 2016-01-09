@@ -61,7 +61,7 @@ if (isset($_GET['err']))
 					</ul>
 				</div>
 <?php } ?>
-<?php if ((isset($_SESSION['connect'])) && (isset($_SESSION['utilisateur']))) { ?>
+<?php if ((isset($_SESSION['connect'])) && (isset($_SESSION['utilisateur'])) && (isset($_SESSION['profile'])) && ($_SESSION['profile'] == 'ADMIN')) { ?>
 				<div class="col-xs-12 col-sm-4 col-md-3" align="center" >
 					<ul class="pagination pagination-sm">
 						<li><?php echo '<a href="update_sac.php?id='.$id.'" role="button" >'.$lib_detail_11.'</a>'; ?></li>
