@@ -17,7 +17,7 @@ $lang = '';
 /*
  * sauver la valeur de $lang dans le cookie $_COOKIE['lang']
  */
-if ((!isset($_GET['lang'])) || ($_COOKIE['lang'] != $lang)) {
+if ((!isset($_GET['lang'])) || (!isset($_COOKIE['lang'])) || ($_COOKIE['lang'] != $lang)) {
 	setcookie('lang', $lang);
 }
 /*
