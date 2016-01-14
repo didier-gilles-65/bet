@@ -18,14 +18,21 @@ if (isset($_SESSION['pagination'])) $pagination=$_SESSION['pagination']; else { 
 
 if (isset($_SESSION['style_liste'])) $style_liste=$_SESSION['style_liste']; else { $style_liste = 'liste longue'; $_SESSION['style_liste']='liste longue'; }
 
-if (isset($_SESSION['requete_courante']) ) $requete_courante = $_SESSION['requete_courante']; else {
+if (isset($_SESSION['requete_courante']))
+{
+	$requete_courante = $_SESSION['requete_courante'];
+}
+else
+{
 	$requete_courante = $sql_defaut_liste_billes;
-	if(!isset($_SESSION['LISTE_CONTEXT'])) unset($SESSION['LISTE_CONTEXT']);
+	if(isset($_SESSION['LISTE_CONTEXT'])) unset($_SESSION['LISTE_CONTEXT']);
 }
 
-if (isset($_GET['reset']) and ($_GET['reset'])) {
+if (isset($_GET['reset']) and ($_GET['reset']))
+{
 	$requete_courante = $sql_defaut_liste_billes;
-	if(!isset($_SESSION['LISTE_CONTEXT'])) unset($SESSION['LISTE_CONTEXT']);
+	if(isset($_SESSION['LISTE_CONTEXT'])) unset($_SESSION['LISTE_CONTEXT']);
+	$_SESSION['requete_courante']=$requete_courante;
 }
 
 if (isset($_GET['from']) and (is_numeric($_GET['from']))) $from = $_GET['from']; else $from=0;
