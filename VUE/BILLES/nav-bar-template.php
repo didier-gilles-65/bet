@@ -24,12 +24,12 @@
 						<li><a href="liste_billes.php?reset=true" rel="tooltip" data-placement="right" title="<?php echo $lib_nav_15;?>"><i class="glyphicon glyphicon-book"></i> <?php echo $lib_nav_28;?></a></li>
 						<li><a href="critere_bille.php" rel="tooltip" data-placement="right" title="<?php echo $lib_nav_17;?>"><i class="glyphicon glyphicon-wrench"></i> <?php echo $lib_nav_29;?></a></li>
 						<li class="divider"></li>
-						<li class="dropdown-submenu"> <a tabindex="-1" href="#"><i class="glyphicon glyphicon-filter"></i> <?php echo $lib_nav_50; ?></a>
-						<ul class="dropdown-menu" role="menu" aria-labelledby="rechercheparcritere">
+						<li class="dropdown-submenu"> <a tabindex="-1" href="#"><i class="glyphicon glyphicon-filter"></i> <?php echo $lib_nav_50; ?></a></li>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="rechercheparcritere">
 <?php foreach ($MENUMARQUES as $MENUMARQUE)  { ?>				
-							<li><a tabindex="-1" rel="tooltip" data-placement="right" title="<?php echo $lib_nav_60;?> <?php echo $MENUMARQUE['MARQUE'];?>" href="filtragemarque.php?marque=<?php echo $MENUMARQUE['MARQUE'];?>"><i class="glyphicon glyphicon-comment"></i> <?php echo $MENUMARQUE['MARQUE'];?></a></li>
+								<li><a tabindex="-1" rel="tooltip" data-placement="right" title="<?php echo $lib_nav_60;?> <?php echo $MENUMARQUE['MARQUE'];?>" href="filtragemarque.php?marque=<?php echo $MENUMARQUE['MARQUE'];?>"><i class="glyphicon glyphicon-comment"></i> <?php echo $MENUMARQUE['MARQUE'];?></a></li>
 <?php }?>				
-						</ul>
+							</ul>
 						<li class="divider"></li>
 						<li><a href="detail.php" rel="tooltip" data-placement="right" title="<?php echo $lib_nav_30;?>"><i class="glyphicon glyphicon-zoom-in"></i> <?php echo $lib_nav_40;?></a></li>
 <?php if ((isset($_SESSION['connect'])) && ($_SESSION['connect'] == 1)) { ?>
