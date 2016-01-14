@@ -49,7 +49,7 @@
 					</div>
 <?php } ?>
 					<br>
-					<div class="form-group">
+					<div class="form-group" style="margin-bottom:20px">
 						<label class="col-sm-2 control-label" for="Autocomplete"><?php echo $lib_manage_blog_40; ?></label>
 						<div class="col-sm-4">
 							<input id="tag_input" class="typeahead" type="text" placeholder="Tags..." onKeyPress="if (event.keyCode == 13) mafonction(event);">
@@ -59,7 +59,7 @@
 							<ul id="taglist" class="tags"><?php
 								if (isset($blog)) {
 									foreach($tags as $tag) {
-										echo '<a  class="mytag" id="tag'.$tag['b_post_billes_tag_text'].'" href="#">'.$tag['b_post_billes_tag_text'].'</a>
+										echo '<a  class="mytag" style="margin-top:10px" id="tag'.$tag['b_post_billes_tag_text'].'" href="#">'.$tag['b_post_billes_tag_text'].'</a>
 ';
 									}
 								}
