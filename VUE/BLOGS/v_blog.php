@@ -26,18 +26,26 @@
 			case 1: $letter_month = $lib_mois_01; break; case 2: $letter_month = $lib_mois_02; break; case 3: $letter_month = $lib_mois_03; break; case 4: $letter_month = $lib_mois_04; break; case 5: $letter_month = $lib_mois_05; break; case 6: $letter_month = $lib_mois_06; break; case 7: $letter_month = $lib_mois_07; break; case 8: $letter_month = $lib_mois_08; break; case 9: $letter_month = $lib_mois_09; break; case 10: $letter_month = $lib_mois_10; break; case 11: $letter_month = $lib_mois_11; break; case 12: $letter_month = $lib_mois_12; break; default: $letter_month = 'Vendémiaire'; break;
 		};
 ?>
-			<div class="row h-padding-normal h-margin-normal" style="background-color:#FFFCF2; margin-bottom:30px;">
+			<div class="row h-padding-normal h-margin-normal" style="background-color:#FFFCF2; margin-bottom:30px; height:50px">
 				<div class="col-xs-2 visible-print"> <!-- IMPRESSION SEULEMENT ! -->
 					<img class="img-circle" style="width:50px;" src="<?php echo get_avatar_link($blog['b_post_user_id'], $blog['b_post_user_email'], $blog['b_post_user_gravatar_flag']);  ?>" alt="..." >
 				</div>
 				<div class="col-xs-12 col-sm-2 hidden-print"> <!-- ECRAN SEULEMENT ! -->
 					<img class="img-circle" style="width:100px;" src="<?php echo get_avatar_link($blog['b_post_user_id'], $blog['b_post_user_email'], $blog['b_post_user_gravatar_flag']);  ?>" alt="..." >
 				</div>
-				<div class="col-xs-12 col-sm-10 hidden-print"> <!-- ECRAN SEULEMENT ! -->
+				<div class="col-xs-12 col-sm-8 hidden-print" align="center"> <!-- ECRAN SEULEMENT ! -->
 					<p style="font-size:120%">
 						<i class="fa fa-calendar fa-lg"></i>  <?php echo $lib_index_230; ?><?php echo date("d", strtotime($blog['b_post_date'])).' '.$letter_month.' '.date("Y", strtotime($blog['b_post_date'])) ; ?>
 						<?php echo $lib_blogs_50; ?> <a href="blogs.php?user=<?php echo $blog['login_blog'] ?>"><?php echo $blog['login_blog'] ?><?php if ((isset($login)) && ($blog['login_blog'] == $login)) { echo '<span style="color:red">'.$lib_index_221.'</span>';} ?></a>
 					</p>
+				</div>
+				<div class="col-xs-12 col-sm-2 hidden-print" align="center"> <!-- ECRAN SEULEMENT ! -->
+				
+<?php if ((isset($_SESSION['connect'])) && (isset($_SESSION['utilisateur'])) && ((isset($_SESSION['profile'])) && ($_SESSION['profile'] == 'ADMIN') || ($_SESSION['utilisateur'] == $blog['login_blog']) ) ) { ?>
+					<ul class="pagination pagination-sm" style="margin:0px">
+						<li><?php echo '<a href="post.php?post_id='.$blog['b_post_id'].'" role="button" >'.$lib_detail_07.'</a>'; ?></li>
+					</ul>
+<?php } ?>
 				</div>
 			</div>
 			<div class="row h-padding-normal h-margin-normal" style="background-color:#FFFCF2; margin-bottom:30px;">
@@ -70,7 +78,7 @@
 				<ul id="tag-list" class="tags">
 <?php
 	foreach($tags as $tag) {
-		echo '<a  class="tag" id="tag'.$tag['b_post_billes_tag_text'].'" href="#">'.$tag['b_post_billes_tag_text'].'</a>';
+		echo '<a  class="tag" style="margin-top:10px" id="tag'.$tag['b_post_billes_tag_text'].'" href="#">'.$tag['b_post_billes_tag_text'].'</a>';
 	}
 ?>
 				</ul>
